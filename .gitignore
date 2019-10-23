@@ -1,0 +1,17 @@
+#Ignore logs
+*.log
+
+#Ignore virtualenvs
+venv/
+*.pyc
+*.conf
+.idea
+instance/
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+dist/
+build/
+*.egg-info/
