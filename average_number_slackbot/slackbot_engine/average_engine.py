@@ -35,7 +35,7 @@ class AverageEngine:
                                                           cursor=conversation_data['response_metadata']['next_cursor'])
                 messages_list.extend(next_cursor_data['messages'])
         if len(messages_list) < 1:
-            raise NoMessagesInChannel
+            raise NoMessagesInChannel('There is no messages in this channel')
         numbers_count = 0
         numbers_sum = 0
         greatest_time = datetime.fromtimestamp(float(messages_list[0]['ts']))
