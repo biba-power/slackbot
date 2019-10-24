@@ -74,7 +74,7 @@ class AverageEngine:
         total_sum = 0
         total_count = 0
         now = datetime.now()
-sl  sl        message_in_last_minute = False
+        message_in_last_minute = False
         for channel in channels:
             try:
                 channel_data = self.get_data_for_channel(channel['id'])
