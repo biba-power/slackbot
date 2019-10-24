@@ -5,7 +5,6 @@ from slackbot_engine.utils import return_numbers
 from slackbot_engine.exceptions import NoNumbersForwarded, NotPrivateChannel, NoMessagesInChannel
 
 
-
 class ConversationAverage(Plugin):
     """A plugin that is responsible for calculating an average of numbers for the triggered channel"""
 
@@ -23,7 +22,9 @@ class ConversationAverage(Plugin):
             average_engine = AverageEngine(self.slack_client)
             channel_data = average_engine.get_data_for_channel(current_channel)
             average = round(channel_data['numbers_sum'] / channel_data['numbers_count'], 2)
-            message_numbers = return_numbers(message)
+
+            # Check if numbers exists in last message. If not except NoNumbersForwarded
+            return_numbers(message)
             self.outputs.append([current_channel, 'The average of numbers for this channel is: {0}'.format(average)])
         except NoMessagesInChannel:
             return

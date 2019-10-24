@@ -9,6 +9,9 @@ config = {
     ]
 }
 if __name__ == '__main__':
+    """
+    Python script that will run 
+    """
     try:
         bot = RtmBot(config)
         bot.start()

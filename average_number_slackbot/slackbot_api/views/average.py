@@ -9,6 +9,17 @@ bp = Blueprint('average', __name__)
 
 @bp.route('/average/<username>', methods=['GET'])
 def average(username):
+    """
+    Route that will return average of numbers for specific slack user
+    :param username: slack username
+    :return: JSON which contains message and sum of numbers
+    (eg. {'message':'Average of all numbers for john user','numbers_sum':45}) if everything is ok,
+    otherwise raise next 404 exceptions:
+        - MemberDoesNotExist - if user with specific name does not exists
+        - MemberDoesNotHaveDmc - if user with specific name does not have direct messages channel with bot
+        - NoMessagesInChannel - if user with specific name does not have any message in direct messages channel with bot
+
+    """
     try:
         average_engine = AverageEngine()
         channel_id = average_engine.get_channel_id(username)
