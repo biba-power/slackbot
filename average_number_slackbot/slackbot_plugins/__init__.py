@@ -1,1 +1,2 @@
-public_channel_id = "CPN14B9M4"
+import os
+public_channel_id = os.environ.get('PUBLIC_CHANNEL', None)
