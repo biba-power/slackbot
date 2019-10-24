@@ -90,7 +90,7 @@ To successfully run a project, the following steps must be completed:
 
 After those steps, the API will be available on 0.0.0.0:5000
 
-If you want to test this API, there is a live server on this link http://116.203.190.86:5000.
+If you want to test this API, there is a live server on this link http://116.203.190.86:5000/average.
 Available users are:
     
     * average-number-bot
