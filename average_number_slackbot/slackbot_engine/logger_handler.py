@@ -2,7 +2,7 @@ import os
 import datetime
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-logger_file_path = '{0}{1}'.format(dir_path, '/logs/slack_bot_logging.txt')
+logger_file_path = '{0}{1}'.format(dir_path, '/slack_bot_logging.txt')
 
 # Checking existence of log file directory. If not exists, create it
 if not os.path.isdir(dir_path):

@@ -7,6 +7,9 @@ venv/
 *.conf
 .idea
 instance/
+logs/
+
+slack_bot_logging.txt
 
 .pytest_cache/
 .coverage
