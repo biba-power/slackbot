@@ -116,7 +116,7 @@ class AverageEngine:
     def _get_messages_from_channel(self, in_conversation_data, in_channel_id, messages_list):
         """
         Method that returns all messages on the channel. Slack API limits the number of return messages in a single
-        call to 100 and give the next_cursor string in response_metadata which means that there are more messages for
+        call to 100 and gives the next_cursor string in response_metadata which means that there are more messages for
         this channel. This method will be called recursively until there is a cursor in the response_metadata
         :param in_conversation_data: data of the conversation which contain messages
         :param in_channel_id: id of a channel
